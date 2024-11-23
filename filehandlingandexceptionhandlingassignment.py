@@ -6,8 +6,8 @@ def read_write_file(input_file, output_file, input_data):
         modified_data = data.capitalize()
 
         with open(output_file, mode="w") as outfile:
-            outfile.write(input_data + "\n")
-            outfile.write(modified_data)
+            outfile.write(input_data + "\n" + modified_data)
+            # outfile.write(modified_data)
 
         print(f"File successfully modified and save as '{output_file}'")
 
