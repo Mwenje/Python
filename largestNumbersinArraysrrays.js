@@ -1,27 +1,28 @@
 function largestOfFour(arr) {
+  const largestArr = [];
+
   for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
-    console.log(element);
+    let largest = arr[i][0];
 
-    let largest = 0;
-    for (let j = 0; j < arr.length; j++) {
-      const element = arr[i][j];
-      console.log(element);
+    for (let j = 1; j < arr[i].length; j++) {
+      let subArrNum = arr[i][j];
 
-      if (element > largest) {
-        largest = element;
+      if (subArrNum > largest) {
+        largest = subArrNum;
       }
-
-      console.log(`The largest is ${largest}`);
     }
+
+    largestArr.push(largest);
   }
 
-  return arr;
+  return largestArr;
 }
 
-largestOfFour([
-  [4, 5, 1, 3],
-  [13, 27, 18, 26],
-  [32, 35, 37, 39],
-  [1000, 1001, 857, 1],
-]);
+console.log(
+  largestOfFour([
+    [4, 5, 1, 3, 56666],
+    [13, 27, 18, 26],
+    [32, 35, 37, 39],
+    [1000, 1001, 857, 1],
+  ])
+);
