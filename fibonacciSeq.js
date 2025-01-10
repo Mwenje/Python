@@ -8,5 +8,5 @@ function fibSeq(n) {
   return fib;
 }
 
-let fib = fibSeq(10);
+let fib = fibSeq(20 );
 console.log(fib.join(" "));
